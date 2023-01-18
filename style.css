@@ -2,15 +2,22 @@
   display: grid;
   grid-template-columns: 40% 20% 40%;
   grid-template-rows: 50% 50%;
+  height: 100%;
   gap: 10px 10px;
   grid-auto-flow: column;
-  grid-auto-flow: row;
 }
 
 .grid-item {
-  background-color: rgba(173, 180, 174, 0.8);
-  border: 1px solid rgba(245, 175, 175, 0.8);
+  background-color: rgba(121, 119, 119, 0.8);
+  border: 3px solid rgba(17, 1, 1, 0.8);
   padding: 20px;
   font-size: 30px;
+  border-radius: 20px;
   text-align: center;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
