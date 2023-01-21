@@ -3,36 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
     <div id="outer-grid">
-      <div class="b">BasisRust</div>
-      <div class="d">Dubbelspoor</div>
-      <div class="a">Aangepast Denken</div>
-      <div class="e">
-        <div>
-          <label class="switch"
-            ><input type="checkbox" /><span class="slider round"></span
-          ></label>
-        </div>
-        <div>Leeftijd</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
+      <div class="b"><h1>BasisRust</h1></div>
+      <div class="d"><h1>Dubbelspoor</h1></div>
+      <div class="a"><h1>Aangepast Denken</h1></div>
+      <div id="knoppen" class="e">
+
+        <!--template knop-->
+        <script type="text/template" id="knoppen-template">
+          <div>
+            <label class="switch"
+              ><input type="checkbox" /><span class="slider round"></span
+            ></label>
+          </div>
+          <div>
+            {{tekst}}
+          </div>
+          
+        </script>
+
+        <script>
+        var template = $( $('#knoppen-template').html() );
+        const texten = ["Leeftijd","Sociaal subtype","Intelligentie","Sociaal-emotionele ontwikkeling","Gender","Begripsniveau","Interesses","Talenten","Comorbiditeit","Sensorisch profiel","Persoonlijkheid","Voorgeschiedenis","Waarden en normen"];
+        for (i = 0; i < texten.length; i++) {
+          var $clone = $('#knoppen-template').html();
+          $clone = $clone.replace("{{tekst}}",texten[i]);
+          $("#knoppen").append($clone);
+        }
+
+        </script>
       </div>
 
-      <div class="c">Concrete communicatie</div>
-      <div class="f">Functionaliteit</div>
+
+
+      <div class="c"><h1>Concrete communicatie</h1></div>
+      <div class="f"><h1>Functionaliteit</h1></div>
     </div>
   </body>
 </html>

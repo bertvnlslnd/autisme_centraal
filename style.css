@@ -16,7 +16,7 @@
   border: 3px solid rgba(90, 88, 88, 0.8);
   padding: 20px;
   border-radius: 20px;
-  text-align: center;
+
 }
 .a {
   grid-area: a;
@@ -108,4 +108,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+h1{
+  text-align: center;
+  font-size: 20px;
 }
