@@ -34,7 +34,6 @@
   grid-area: e;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-flow: row;
 }
 
 .f {
