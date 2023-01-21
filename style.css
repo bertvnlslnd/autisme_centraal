@@ -9,6 +9,7 @@
   grid-template-rows: repeat(4, 25%);
   width: 90vw;
   height: 90vh;
+  gap: 2% 2%;
 }
 #outer-grid > div {
   background-color: rgb(206, 200, 200);
