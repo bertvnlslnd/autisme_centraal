@@ -4,11 +4,20 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <script src="jquery.min.js"></script>
+    
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
     <div id="outer-grid">
-      <div class="b"><h1>BasisRust</h1></div>
+      <div class="b"><h1>BasisRust</h1>
+        <!--afmetingen van de canvas zitten in XyFeature.js-->
+        <div><canvas id="grafiek1" class="grafiek"></canvas></div>
+        <input id="xRange" type="range" min="0" max="100" value="20" >
+        <input id="yRange"type="range" min="0" max="100" value="20" >
+        <script src="XyFeature.js"></script>
+
+
+      </div>
       <div class="d"><h1>Dubbelspoor</h1></div>
       <div class="a"><h1>Aangepast Denken</h1></div>
       <div id="knoppen" class="e">
@@ -17,8 +26,8 @@
         <script type="text/template" id="knoppen-template">
           <div>
             <label class="switch"
-              ><input type="checkbox" /><span class="slider round"></span
-            ></label>
+              ><input type="checkbox" /><span class="slider round"></span>
+            </label>
           </div>
           <div>
             {{tekst}}
