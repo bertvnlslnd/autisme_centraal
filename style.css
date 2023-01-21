@@ -1,8 +1,14 @@
 #outer-grid {
   display: grid;
-  grid-template-columns: 40% 20% 40%;
-  grid-template-rows: 50% 50%;
-  height: 90%;
+  grid-template-areas:
+    "b b a c c "
+    "b b e c c "
+    "d d e f f "
+    "d d e f f ";
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repaet(4, 25%);
+  width: 90vw;
+  height: 90vh;
   gap: 10px 10px;
   grid-auto-flow: column;
 }
@@ -16,27 +22,34 @@
   text-align: center;
 }
 
-#eigenheid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 90%;
-  grid-auto-flow: column;
-  grid-auto-flow: row;
+.b {
+  grid-area: b;
 }
 
-#eigenheid > div {
-  background-color: rgb(206, 200, 200);
-  border: 3px solid rgba(90, 88, 88, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  border-radius: 20px;
-  text-align: center;
+.d {
+  grid-area: d;
+}
+
+.a {
+  grid-area: a;
+}
+
+.e {
+  grid-area: e;
+}
+
+.c {
+  grid-area: c;
+}
+
+.f {
+  grid-area: f;
 }
 
 html,
 body {
   margin: 1%;
-  height: 100%;
+  height: 90%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -105,9 +118,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
