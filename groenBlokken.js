@@ -4,6 +4,7 @@ for (i = 0; i < kolommen.length; i++) {
     var $clone = $('#kolomGroeneBlokken-template').html();
     $clone = $clone.replace("{{tekst}}",kolommen[i]);
     $clone = $clone.replace("{{id}}",i);
+    $clone = $clone.replace("{{id2}}",i);
     $("#groenBlokken").append($clone)
 
     //leds plaatsen
@@ -12,4 +13,11 @@ for (i = 0; i < kolommen.length; i++) {
 		var div = $(`<div id = led${i}${aantal-j} class = led/>`);
 		$(div).appendTo($("#k"+i));
 	}
+    $("#slider"+i).roundSlider({
+        radius: 40,
+        sliderType: "min-range",
+        circleShape: "half-top",
+        showTooltip: false,
+        value: 0,
+        });
 }
