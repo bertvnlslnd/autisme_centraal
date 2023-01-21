@@ -117,3 +117,34 @@ h1{
 .grafiek{
 	background-color:grey;
 }
+.rotated {
+  writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+  width: 10px;
+  height: 200px;
+  margin-right: 5px;
+
+}
+.centreren{
+  display: flex;
+  justify-content: center;
+}
+.verticaalCentreren
+{
+  position: relative;
+}
+.v-centered-element {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*JVLS kolommen*/
+.container {
+  display: flex;
+}
+.kolom{
+
+  margin: 5px;
+}

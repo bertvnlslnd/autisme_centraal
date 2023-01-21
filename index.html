@@ -11,9 +11,16 @@
     <div id="outer-grid">
       <div class="b"><h1>BasisRust</h1>
         <!--afmetingen van de canvas zitten in XyFeature.js-->
-        <div><canvas id="grafiek1" class="grafiek"></canvas></div>
-        <input id="xRange" type="range" min="0" max="100" value="20" >
-        <input id="yRange"type="range" min="0" max="100" value="20" >
+        
+        <div class="container centreren">
+          <div class="kolom verticaalCentreren"><input id="yRange"type="range" min="0" max="100" value="20" orient="vertical" class="rotated v-centered-element"></div>
+          <div class="kolom"><div><canvas id="grafiek1" class="grafiek"></canvas></div></div>
+        </div>
+        <div class="centreren">
+          <input  id="xRange" type="range" min="0" max="100" value="20" >
+        </div>
+        
+        
         <script src="XyFeature.js"></script>
 
 

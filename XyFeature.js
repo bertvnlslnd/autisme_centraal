@@ -28,7 +28,7 @@
 		
 
 		var x= straal +(afmeting-2*straal)/100*$("#xRange").val();
-		var y= straal + (afmeting-2*straal)/100*$("#yRange").val();
+		var y= straal + (afmeting-2*straal)/100*(100-$("#yRange").val());
 		
 		var grens1 = afmeting-(knooppunt-straal) -x
 		var grens2 = afmeting+(knooppunt-straal) -x
