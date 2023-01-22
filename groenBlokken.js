@@ -5,6 +5,7 @@ for (i = 0; i < kolommen.length; i++) {
     $clone = $clone.replace("{{tekst}}",kolommen[i]);
     $clone = $clone.replace("{{id}}",i);
     $clone = $clone.replace("{{id2}}",i);
+    $clone = $clone.replace("{{kolom}}",i);
     $("#groenBlokken").append($clone)
 
     //leds plaatsen
@@ -19,5 +20,31 @@ for (i = 0; i < kolommen.length; i++) {
         circleShape: "half-top",
         showTooltip: false,
         value: 0,
+        drag: "ledsKleuren",
+		change:"ledsKleuren",
         });
+}
+
+function ledsKleuren(e)
+{
+    var kolom = $("#"+e.id).attr("kolom")
+    var value = Math.round(e.value/10);
+
+    var j=0;
+	//console.log("i:"+ value);
+	for(j = 1; j <= value; j++)
+	{
+		$("#led"+kolom+j).removeClass("led");
+		$("#led"+kolom+j).addClass("ledOn");
+		//console.log(`#led1${j}`);			
+    }	
+	//console.log(j);
+	if(j!=11){
+		for(var k = value+1;k <= 10; k++)
+		{
+	    	$("#led"+kolom+j).addClass("led");
+			$("#led"+kolom+j).removeClass("ledOn");
+		}
+	}
+
 }
