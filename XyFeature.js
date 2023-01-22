@@ -34,9 +34,9 @@
 		var grens2 = afmeting+(knooppunt-straal) -x
 		ctx.beginPath();
 		ctx.arc(x, y, straal, 0, 2 * Math.PI);
-		console.log("("+x+","+y+")");
-		console.log("g1 "+grens1);
-		console.log("g2 "+grens2);
+		//console.log("("+x+","+y+")");
+		//console.log("g1 "+grens1);
+		//console.log("g2 "+grens2);
 		if(y>grens1 && y < grens2)
 		{
 			ctx.fillStyle= 'green';
