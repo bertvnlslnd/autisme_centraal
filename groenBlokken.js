@@ -1,5 +1,5 @@
 
-const kolommen=["Expleciet","begrijpelijk"]
+const kolommen=["Expliciet","Begrijpelijk","Beschikbaar"]
 for (i = 0; i < kolommen.length; i++) {
     var $clone = $('#kolomGroeneBlokken-template').html();
     $clone = $clone.replace("{{tekst}}",kolommen[i]);
