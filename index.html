@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="roundslider.min.css" />
     <script src="jquery.min.js"></script>
+    <script src="roundslider.min.js"></script>
     
     <title>Autisme Centraal Methodiek</title>
   </head>
@@ -38,8 +40,7 @@
           </div>
           <div>
             {{tekst}}
-          </div>
-          
+          </div>          
         </script>
 
         <script>
@@ -56,7 +57,25 @@
 
 
 
-      <div class="c"><h1>Concrete communicatie</h1></div>
+      <div class="c"><h1>Concrete communicatie</h1>
+        <div id="groenBlokken" class="container">
+          <div class="kolom">Werk voor Bertje</div>
+          <!--template kolom-->
+          <script type="text/template" id="kolomGroeneBlokken-template">
+            
+            <div class="kolom">
+              <div id="k{{id}}"></div>
+              {{tekst}}
+              <div id ="slider{{id2}}" kolom="{{kolom}}"></div>
+            </div>
+           
+          </script>
+
+          
+
+        </div>
+        <script src="groenBlokken.js"></script>
+      </div>
       <div class="f"><h1>Functionaliteit</h1></div>
     </div>
   </body>

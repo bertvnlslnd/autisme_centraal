@@ -148,3 +148,20 @@ h1{
 
   margin: 5px;
 }
+/*groene blokken*/
+.led{
+	background-color : grey;
+	width: 30px;
+	height: 15px;
+	margin: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ledOn{
+	background-color : green;
+	width: 30px;
+	height: 15px;
+	margin: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
