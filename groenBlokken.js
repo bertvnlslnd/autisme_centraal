@@ -32,12 +32,12 @@ function ledsKleuren(e)
 
     var j=0;
 	//console.log("i:"+ value);
-    console.log("ledsAan:")
+    //console.log("ledsAan:")
 	for(j = 1; j <= value; j++)
 	{
 		$("#led"+kolom+j).removeClass("led");
 		$("#led"+kolom+j).addClass("ledOn");
-		console.log("#led"+kolom+j);			
+		//console.log("#led"+kolom+j);			
     }	
 	//console.log(j);
 	if(j!=11){
@@ -46,7 +46,7 @@ function ledsKleuren(e)
 		{
 	    	$("#led"+kolom+k).addClass("led");
 			$("#led"+kolom+k).removeClass("ledOn");
-            console.log("#led"+kolom+k);
+            //console.log("#led"+kolom+k);
 		}
 	}
 
