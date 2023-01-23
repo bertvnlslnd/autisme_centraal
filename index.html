@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="roundslider.min.css" />
     <script src="jquery.min.js"></script>
     <script src="roundslider.min.js"></script>
+    <script src="groenBlokken.js"></script>
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
@@ -77,19 +78,17 @@
 
       <div class="c">
         <h1>Concrete communicatie</h1>
-        <div id="groenBlokken" class="container">
+        <div  class="container">
           <div class="kolom">Werk voor Bertje</div>
-          <!--template kolom-->
-          <script type="text/template" id="kolomGroeneBlokken-template">
+          <div class="kolom" id="blokken1"></div>
+          <div class="kolom" id="blokken2"></div>
+          <div class="kolom" id="blokken3"></div>
+          <script>groeneBlokken($("#blokken1"),"Expliciet");</script>
+          <script>groeneBlokken($("#blokken2"),"Begrijpelijk");</script>
+          <script>groeneBlokken($("#blokken3"),"Beschikbaar");</script>
 
-            <div class="kolom">
-              <div id="k{{id}}"></div>
-              {{tekst}}
-              <div id ="slider{{id2}}" kolom="{{kolom}}"></div>
-            </div>
-          </script>
         </div>
-        <script src="groenBlokken.js"></script>
+        
       </div>
       <div class="f"><h1>Functionaliteit</h1></div>
     </div>
