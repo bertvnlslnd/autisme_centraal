@@ -12,7 +12,8 @@
   <body>
     <div id="outer-grid">
       <div class="b">
-        <h1>BasisRust</h1>
+        <div class="header centreren"><h1>BasisRust</h1></div>
+
         <!--afmetingen van het canvas zitten in XyFeature.js-->
         <div class="container centreren">
           <div class="kolom verticaalCentreren">
@@ -36,9 +37,15 @@
 
         <script src="XyFeature.js"></script>
       </div>
-      <div class="d"><h1>Dubbelspoor</h1></div>
-      <div class="a"><h1>Aangepast Denken</h1></div>
+      <div class="d">
+        <div class="header centreren"><h1>Dubbel Spoor</h1></div>
+      </div>
+      <div class="a">
+        <div class="header centreren"><h1>Aangepast Denken</h1></div>
+      </div>
       <div id="knoppen" class="e">
+        <div class="header centreren"><h1>Eigenheid</h1></div>
+
         <!--template knop-->
         <script type="text/template" id="knoppen-template">
           <div>
@@ -77,30 +84,41 @@
       </div>
 
       <div class="c">
-        <h1>Concrete communicatie</h1>
-        <div  class="container">
+        <div class="header centreren"><h1>Concrete communicatie</h1></div>
+
+        <div class="container">
           <div class="kolom">Werk voor Bertje</div>
           <div class="kolom" id="blokken1"></div>
           <div class="kolom" id="blokken2"></div>
           <div class="kolom" id="blokken3"></div>
-          <script>groeneBlokken($("#blokken1"),"Expliciet");</script>
-          <script>groeneBlokken($("#blokken2"),"Begrijpelijk");</script>
-          <script>groeneBlokken($("#blokken3"),"Beschikbaar");</script>
-
+          <script>
+            groeneBlokken($("#blokken1"), "Expliciet");
+          </script>
+          <script>
+            groeneBlokken($("#blokken2"), "Begrijpelijk");
+          </script>
+          <script>
+            groeneBlokken($("#blokken3"), "Beschikbaar");
+          </script>
         </div>
-        
       </div>
-      <div class="f"><h1>Functionaliteit</h1>
-        <div  class="container">
-          
+      <div class="f">
+        <div class="header centreren"><h1>Functionaliteit</h1></div>
+
+        <div class="container">
           <div class="kolom" id="blokken4"></div>
           <div class="kolom" id="blokken5"></div>
           <div class="kolom" id="blokken6"></div>
-          <script>groeneBlokken($("#blokken4"),"Comptentie");</script>
-          <script>groeneBlokken($("#blokken5"),"Autonomie");</script>
-          <script>groeneBlokken($("#blokken6"),"Verbondenheid");</script>
+          <script>
+            groeneBlokken($("#blokken4"), "Comptentie");
+          </script>
+          <script>
+            groeneBlokken($("#blokken5"), "Autonomie");
+          </script>
+          <script>
+            groeneBlokken($("#blokken6"), "Verbondenheid");
+          </script>
           <div class="kolom">Werk voor Bertje</div>
-
         </div>
       </div>
     </div>
