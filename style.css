@@ -16,7 +16,6 @@
   border: 3px solid rgba(90, 88, 88, 0.8);
   padding: 20px;
   border-radius: 20px;
-
 }
 .a {
   grid-area: a;
@@ -109,13 +108,13 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 20px;
 }
 /*nodig voor de XY-feature*/
-.grafiek{
-	background-color:grey;
+.grafiek {
+  background-color: grey;
 }
 .rotated {
   writing-mode: bt-lr;
@@ -123,14 +122,12 @@ h1{
   width: 10px;
   height: 200px;
   margin-right: 5px;
-
 }
-.centreren{
+.centreren {
   display: flex;
   justify-content: center;
 }
-.verticaalCentreren
-{
+.verticaalCentreren {
   position: relative;
 }
 .v-centered-element {
@@ -144,24 +141,23 @@ h1{
 .container {
   display: flex;
 }
-.kolom{
-
+.kolom {
   margin: 5px;
 }
 /*groene blokken*/
-.led{
-	background-color : grey;
-	width: 30px;
-	height: 15px;
-	margin: 5px;
-	margin-left: auto;
-	margin-right: auto;
+.led {
+  background-color: grey;
+  width: 30px;
+  height: 10px;
+  margin: 2px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.ledOn{
-	background-color : green;
-	width: 30px;
-	height: 15px;
-	margin: 5px;
-	margin-left: auto;
-	margin-right: auto;
+.ledOn {
+  background-color: green;
+  width: 30px;
+  height: 10px;
+  margin: 2px;
+  margin-left: auto;
+  margin-right: auto;
 }
