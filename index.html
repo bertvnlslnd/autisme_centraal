@@ -37,7 +37,7 @@
 
         <script src="XyFeature.js"></script>
       </div>
-      t
+
       <div class="d">
         <div class="header centreren"><h1>Dubbel Spoor</h1></div>
         <!--template knop-->
@@ -139,9 +139,8 @@
 
       <div class="c">
         <div class="header centreren"><h1>Concrete communicatie</h1></div>
-
+        <div>KNOPPEN</div>
         <div class="container">
-          <div class="kolom">TODO</div>
           <div class="kolom" id="blokken1"></div>
           <div class="kolom" id="blokken2"></div>
           <div class="kolom" id="blokken3"></div>
@@ -153,6 +152,34 @@
           </script>
           <script>
             groeneBlokken($("#blokken3"), "Beschikbaar");
+          </script>
+        </div>
+        <div id="c_labels" , class="test">
+          <script type="text/template" id="c_labels-template">
+            <div>
+              <label class="switch"
+                ><input type="checkbox"/><span class="slider round"></span>
+              </label>
+            </div>
+            <div>
+              {{tekst}}
+            </div>
+          </script>
+          <script>
+            var test = $($("c_labels-template").html());
+            const c = [
+              "Tijd",
+              "Ruimte",
+              "Activiteit",
+              "Gedrag",
+              "Verwachtingen",
+              "Gevolgen",
+            ];
+            for (i = 0; i < c.length; i++) {
+              var $clone = $("#c_labels-template").html();
+              $clone = $clone.replace("{{tekst}}", c[i]);
+              $("#c_labels").append($clone);
+            }
           </script>
         </div>
       </div>

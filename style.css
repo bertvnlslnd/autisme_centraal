@@ -25,7 +25,10 @@
 }
 .c {
   grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
+
 .d {
   grid-area: d;
   display: grid;
@@ -181,6 +184,16 @@ h1 {
 #test2 {
   grid-column-start: 4;
   grid-column-end: 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#ledsc {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#c_labels {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
