@@ -153,6 +153,7 @@ h1 {
 /*groene blokken*/
 .led {
   background-color: grey;
+  border-radius: 5px;
   width: 30px;
   height: 10px;
   margin: 2px;
