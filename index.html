@@ -36,17 +36,41 @@
         </div>
 
         <script src="XyFeature.js"></script>
-      </div>
-      <div class="d">
-        <div class="header centreren"><h1>Dubbelspoor</h1></div>
+      </div>t
+      <div id="test" class="d">
+        <div class="header centreren"><h1>Dubbel Spoor</h1></div>
+        <!--template knop-->
+        <script type="text/template" id="test-template">
+          <div>
+            <label class="switch"
+              ><input type="checkbox"/><span class="slider round"></span>
+            </label>
+          </div>
+          <div>
+            {{tekst}}
+          </div>
+        </script>
+        <script>
+          var test = $($("#test-template").html());
+          const d = [
+            "Leeftijd",
+            "Sociaal subtype",
+            "Persoonlijkheid",
+            "Voorgeschiedenis",
+            "Waarden en normen",
+          ];
+          for (i = 0; i < d.length; i++) {
+            var $clone = $("#test-template").html();
+            $clone = $clone.replace("{{tekst}}", d[i]);
+            $("#test").append($clone);
+          }
+        </script>
       </div>
       <div class="a">
         <div class="header centreren"><h1>Aangepast Denken</h1></div>
       </div>
       <div id="knoppen" class="e">
         <div class="header centreren"><h1>Eigenheid</h1></div>
-
-        <!--template knop-->
         <script type="text/template" id="knoppen-template">
           <div>
             <label class="switch"
@@ -57,7 +81,6 @@
             {{tekst}}
           </div>
         </script>
-
         <script>
           var template = $($("#knoppen-template").html());
           const texten = [
