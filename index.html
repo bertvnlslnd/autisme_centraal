@@ -69,6 +69,33 @@
             }
           </script>
         </div>
+        <div id="test2" , class="test">
+          <script type="text/template" id="test2-template">
+            <div>
+              <label class="switch"
+                ><input type="checkbox"/><span class="slider round"></span>
+              </label>
+            </div>
+            <div>
+              {{tekst}}
+            </div>
+          </script>
+          <script>
+            var test = $($("#test2-template").html());
+            const d2 = [
+              "Communicatie",
+              "Sociaal",
+              "Vrije tijd",
+              "Zelfredzaamheid",
+              "Leer/Werk",
+            ];
+            for (i = 0; i < d2.length; i++) {
+              var $clone = $("#test2-template").html();
+              $clone = $clone.replace("{{tekst}}", d2[i]);
+              $("#test2").append($clone);
+            }
+          </script>
+        </div>
       </div>
       <div class="a">
         <div class="header centreren"><h1>Aangepast Denken</h1></div>
