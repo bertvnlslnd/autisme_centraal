@@ -25,7 +25,7 @@ function tekenBal(ctx) {
   ctx.lineTo(0, afmeting);
   ctx.lineTo(0, afmeting - knooppunt); // links onder
   ctx.closePath();
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "grey";
   ctx.fill();
 
   var x = straal + ((afmeting - 2 * straal) / 100) * $("#xRange").val();
@@ -36,9 +36,9 @@ function tekenBal(ctx) {
   ctx.beginPath();
   ctx.arc(x, y, straal, 0, 2 * Math.PI);
   if (y > grens1 && y < grens2) {
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "#6ff36b";
   } else {
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "rgb(190, 101, 101)";
   }
   ctx.fill();
 }
