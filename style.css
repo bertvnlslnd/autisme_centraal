@@ -13,7 +13,7 @@
 }
 #outer-grid > div {
   background-color: rgba(206, 200, 200, 0.685);
-  border: 5px solid rgba(90, 88, 88, 0.8);
+  border: 3px solid rgba(90, 88, 88, 0.8);
   padding: 20px;
   border-radius: 20px;
 }
