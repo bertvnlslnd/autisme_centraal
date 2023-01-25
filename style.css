@@ -167,7 +167,7 @@ h1 {
 .header {
   grid-column: 1 / -1; /* spans all columns */
   grid-row: 1;
-  color: #010375;
+  color: #000007;
 }
 
 #test {
