@@ -29,7 +29,7 @@
 .d {
   grid-area: d;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
 }
 .e {
   grid-area: e;
@@ -168,4 +168,10 @@ h1 {
   grid-column: 1 / -1; /* spans all columns */
   grid-row: 1;
   color: #010375;
+}
+
+.test {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
