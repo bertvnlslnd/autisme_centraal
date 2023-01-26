@@ -33,11 +33,11 @@ function groeneBlokken($basisBlok, $titel) {
   }
   $(tekst).appendTo($basisBlok);
   var slider = $(
-    "<div id ='" +
+    "<div class='centreren'><div id ='" +
       idBasisBlok +
       "_slider' basisblok =" +
       idBasisBlok +
-      "></div>"
+      "></div></div>"
   );
   $(slider).appendTo($basisBlok);
   $("#" + idBasisBlok + "_slider").roundSlider({
