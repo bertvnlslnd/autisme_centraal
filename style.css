@@ -40,6 +40,8 @@
 
 .f {
   grid-area: f;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 html,
@@ -89,7 +91,6 @@ h1 {
 /*groene blokken*/
 .led {
   background-color: grey;
-  border-radius: 5px;
   width: 30px;
   height: 10px;
   margin: 2px;
@@ -134,5 +135,3 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
-

@@ -11,6 +11,10 @@
     <script src="knob-min.js"></script>
     <script src="p1.js"></script>
     <link rel="stylesheet" href="p1.css" />
+    <script src="p2.js"></script>
+    <link rel="stylesheet" href="p2.css" />
+    <script src="p3.js"></script>
+    <link rel="stylesheet" href="p3.css" />
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
@@ -111,8 +115,6 @@
               id="knop"
               class="preset1"
               type="range"
-              min="0"
-              max="3"
               data-width="100"
               data-height="100"
               data-angleOffset="-45"
@@ -225,6 +227,57 @@
             groeneBlokken($("#blokken6"), "Competentie");
           </script>
           <div class="kolom"></div>
+        </div>
+
+        <div class="f_kolom">
+          <div class="container centreren">
+            <input
+              id="knop1"
+              class="preset2"
+              type="range"
+              data-width="100"
+              data-height="100"
+              data-angleOffset="-45"
+              data-labels="Persoon,Omgeving"
+              data-angleRange="90"
+            />
+          </div>
+          <script>
+            new Knob(document.getElementById("knop1"), new Ui.P2());
+          </script>
+           <div class="container centreren">
+            <input
+              id="knop2"
+              class="preset2"
+              type="range"
+              data-width="50"
+              data-height="50"
+              data-angleOffset="-45"
+              data-labels="Nu,Later"
+              data-angleRange="90"
+            />
+          </div>
+          <script>
+            new Knob(document.getElementById("knop2"), new Ui.P2());
+          </script>
+           <div class="container centreren">
+            <input
+              id="knop3"
+              class="preset3"
+              type="range"
+              min="0"
+              max="10"
+              data-width="100"
+              data-height="100"
+              data-angleOffset="-45"
+              data-labels="Persoon,Omgeving"
+              data-angleRange="90"
+            />
+          </div>
+          <script>
+            new Knob(document.getElementById("knop3"), new Ui.P3());
+          </script>
+        </div>
         </div>
       </div>
     </div>

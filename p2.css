@@ -1,27 +1,27 @@
-.p1 rect {
+.p2 rect {
   fill: #000000;
 }
 
-.p1 g polygon {
+.p2 g polygon {
   opacity: 1;
 }
 
-.p1 circle {
+.p2 circle {
   fill: #ffffff;
   stroke: rgb(190, 101, 101);
-  stroke-width: 10;
+  stroke-width: 4;
   filter: url(#dropshadow);
 }
 
-.p1 text {
+.p2 text {
   font-size: 8px;
   fill: #000000;
-  font-family: "Gill Sans";
+  font-family: sans-serif;
   font-weight: 30;
   -webkit-transition: all 0.1s ease-in-out;
 }
 
-.p1 text.active {
+.p2 text.active {
   font-size: 15px;
-  -webkit-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
