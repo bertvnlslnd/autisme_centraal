@@ -27,6 +27,7 @@
   grid-area: c;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  position: relative; /* make the container a positioned ancestor */
 }
 
 .d {
@@ -134,4 +135,14 @@ h1 {
 #c_labels {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+h5 {
+  justify-content: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  position: relative; /* make the container a positioned ancestor */
 }

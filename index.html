@@ -166,7 +166,40 @@
 
       <div class="c">
         <div class="header centreren"><h1>Concrete communicatie</h1></div>
-        <div>KNOPPEN</div>
+        <div>
+          <div class="centreren bottom"><h5>Voldoende</h5></div>
+          <div class="container centreren">
+            <input
+              id="knop4"
+              class="preset3"
+              type="range"
+              min="0"
+              max="10"
+              data-width="60"
+              data-height="60"
+              data-angleOffset="-120"
+              data-angleRange="240"
+            />
+          </div>
+          <script>
+            new Knob(document.getElementById("knop4"), new Ui.P3());
+          </script>
+          <div class ="container centreren">
+            <input
+            id="knop5"
+            class="preset2"
+            type="range"
+            data-width="60"
+            data-height="60"
+            data-angleOffset="-45"
+            data-labels="Neg,Pos"
+            data-angleRange="90"
+          />
+        </div>
+        <script>
+          new Knob(document.getElementById("knop5"), new Ui.P2());
+        </script>
+        </div>
         <div class="container">
           <div class="kolom" id="blokken1"></div>
           <div class="kolom" id="blokken2"></div>
