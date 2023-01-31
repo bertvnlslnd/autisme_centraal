@@ -1,5 +1,5 @@
 .p1 rect {
-  fill: #57C7B6;
+  fill: #000000;
 }
 
 .p1 g polygon {
@@ -7,21 +7,21 @@
 }
 
 .p1 circle {
-  fill: #256058;
-  stroke: #57C7B6;
+  fill: #ffffff;
+  stroke: rgb(190, 101, 101);
   stroke-width: 2;
   filter: url(#dropshadow);
 }
 
 .p1 text {
   font-size: 10px;
-  fill: #57C7B6;
+  fill: #000000;
   font-family: sans-serif;
   font-weight: 300;
-  -webkit-transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
 }
 
 .p1 text.active {
   font-size: 15px;
-  -webkit-transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
