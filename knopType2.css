@@ -1,0 +1,27 @@
+.knopType2 rect {
+  fill: #000000;
+}
+
+.knopType2 g polygon {
+  opacity: 1;
+}
+
+.knopType2 circle {
+  fill: #ffffff;
+  stroke: rgb(190, 101, 101);
+  stroke-width: 10;
+  filter: url(#dropshadow);
+}
+
+.knopType2 text {
+  font-size: 8px;
+  fill: #000000;
+  font-family: "Gill Sans";
+  font-weight: 30;
+  -webkit-transition: all 0.1s ease-in-out;
+}
+
+.knopType2 text.active {
+  font-size: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+}
