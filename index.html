@@ -9,12 +9,9 @@
     <script src="roundslider.min.js"></script>
     <script src="groenBlokken.js"></script>
     <script src="knob-min.js"></script>
-    <script src="p1.js"></script>
-    <link rel="stylesheet" href="p1.css" />
-    <script src="p2.js"></script>
-    <link rel="stylesheet" href="p2.css" />
-    <script src="p3.js"></script>
-    <link rel="stylesheet" href="p3.css" />
+    <script src="jim-knop.js"></script>
+    <link rel="stylesheet" href="knopType1.css" />
+    <link rel="stylesheet" href="knopType2.css" />
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
@@ -123,7 +120,7 @@
             />
           </div>
           <script>
-            new Knob(document.getElementById("knop"), new Ui.P1());
+            new Knob(document.getElementById("knop"), new Ui.Knop("knopType1"));
           </script>
         </div>
       </div>
@@ -268,6 +265,8 @@
               id="knop1"
               class="preset2"
               type="range"
+              min="0"
+              max="1"
               data-width="100"
               data-height="100"
               data-angleOffset="-45"
@@ -276,13 +275,15 @@
             />
           </div>
           <script>
-            new Knob(document.getElementById("knop1"), new Ui.P2());
+            new Knob(document.getElementById("knop1"), new Ui.Knop("knopType1"));
           </script>
            <div class="container centreren">
             <input
               id="knop2"
               class="preset2"
               type="range"
+              min="0"
+              max="1"
               data-width="50"
               data-height="50"
               data-angleOffset="-45"
@@ -291,7 +292,7 @@
             />
           </div>
           <script>
-            new Knob(document.getElementById("knop2"), new Ui.P2());
+            new Knob(document.getElementById("knop2"), new Ui.Knop("knopType2"));
           </script>
            <div class="centreren bottom">
            <h5>Generaliseerbaar</h5>
@@ -310,7 +311,7 @@
             />
           </div>
           <script>
-            new Knob(document.getElementById("knop3"), new Ui.P3());
+            new Knob(document.getElementById("knop3"), new Ui.Knop("knopType2"));
           </script>
         </div>
         </div>
