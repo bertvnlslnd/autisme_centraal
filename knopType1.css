@@ -1,27 +1,27 @@
-.p3 rect {
+.knopType1 rect {
   fill: #000000;
 }
 
-.p3 g polygon {
+.knopType1 g polygon {
   opacity: 1;
 }
 
-.p3 circle {
+.knopType1 circle {
   fill: #ffffff;
   stroke: rgb(190, 101, 101);
-  stroke-width: 4;
+  stroke-width: 10;
   filter: url(#dropshadow);
 }
 
-.p3 text {
+.knopType1 text {
   font-size: 8px;
   fill: #000000;
-  font-family: sans-serif;
+  font-family: "Gill Sans";
   font-weight: 30;
   -webkit-transition: all 0.1s ease-in-out;
 }
 
-.p3 text.active {
+.knopType1 text.active {
   font-size: 15px;
-  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
 }

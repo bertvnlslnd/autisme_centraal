@@ -1,10 +1,11 @@
-Ui.P1 = function() {
-
+Ui.Knop = function(cssClasse) {
+  this.cssClasse = cssClasse;
 };
 
-Ui.P1.prototype = Object.create(Ui.prototype);
+Ui.Knop.prototype = Object.create(Ui.prototype);
 
-Ui.P1.prototype.createElement = function() {
+Ui.Knop.prototype.createElement = function(cssClasse) {
+  
   "use strict";
   Ui.prototype.createElement.apply(this, arguments);
   this.addComponent(new Ui.Pointer({
@@ -21,5 +22,6 @@ Ui.P1.prototype.createElement = function() {
 
   var circle = new Ui.El.Circle(this.width / 3.3, this.width / 2, this.height / 2);
   this.el.node.appendChild(circle.node);
-  this.el.node.setAttribute("class", "p1");
+  console.log(this.cssClasse);
+  this.el.node.setAttribute("class", this.cssClasse);
 };
