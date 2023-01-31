@@ -9,7 +9,7 @@
 .knopType2 circle {
   fill: #ffffff;
   stroke: rgb(190, 101, 101);
-  stroke-width: 10;
+  stroke-width: 5;
   filter: url(#dropshadow);
 }
 
