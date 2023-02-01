@@ -32,6 +32,8 @@
 
 .d {
   grid-area: d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .e {
   grid-area: e;
