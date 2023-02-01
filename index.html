@@ -46,7 +46,27 @@
       <div class="d">
         <div class="header centreren"><h1>Dubbel Spoor</h1></div>
         <!--template knop-->
-        <div class="container">
+        <div>
+          <div class="container centreren">
+            <input
+              id="knop7"
+              class="preset3"
+              type="range"
+              min="0"
+              max="10"
+              data-width="60"
+              data-height="60"
+              data-angleOffset="-120"
+              data-angleRange="240"
+            />
+          </div>
+          <script>
+            new Knob(
+              document.getElementById("knop7"),
+              new Ui.Dial("knopType2")
+            );
+          </script>
+
           <div id="test" , class="kolom">
             <script type="text/template" id="test-template">
               <div>
@@ -76,33 +96,54 @@
             </script>
           </div>
         </div>
-        <div class="container">
-          <div id="test2" , class="kolom">
-            <script type="text/template" id="test2-template">
-              <div>
-                <label class="switch"
-                  ><input type="checkbox"/><span class="slider round"></span>
-                </label>
-              </div>
-              <div>
-                {{tekst}}
-              </div>
-            </script>
-            <script>
-              var test = $($("#test2-template").html());
-              const d2 = [
-                "Communicatie",
-                "Sociaal",
-                "Vrije tijd",
-                "Zelfredzaamheid",
-                "Leer/Werk",
-              ];
-              for (i = 0; i < d2.length; i++) {
-                var $clone = $("#test2-template").html();
-                $clone = $clone.replace("{{tekst}}", d2[i]);
-                $("#test2").append($clone);
-              }
-            </script>
+        <div>
+          <div class="container centreren">
+            <input
+              id="knop8"
+              class="preset3"
+              type="range"
+              min="0"
+              max="10"
+              data-width="60"
+              data-height="60"
+              data-angleOffset="-120"
+              data-angleRange="240"
+            />
+          </div>
+          <script>
+            new Knob(
+              document.getElementById("knop8"),
+              new Ui.Dial("knopType2")
+            );
+          </script>
+          <div>
+            <div id="test2" , class="kolom">
+              <script type="text/template" id="test2-template">
+                <div>
+                  <label class="switch"
+                    ><input type="checkbox"/><span class="slider round"></span>
+                  </label>
+                </div>
+                <div>
+                  {{tekst}}
+                </div>
+              </script>
+              <script>
+                var test = $($("#test2-template").html());
+                const d2 = [
+                  "Communicatie",
+                  "Sociaal",
+                  "Vrije tijd",
+                  "Zelfredzaamheid",
+                  "Leer/Werk",
+                ];
+                for (i = 0; i < d2.length; i++) {
+                  var $clone = $("#test2-template").html();
+                  $clone = $clone.replace("{{tekst}}", d2[i]);
+                  $("#test2").append($clone);
+                }
+              </script>
+            </div>
           </div>
         </div>
       </div>
@@ -289,7 +330,7 @@
           <div class="kolom"></div>
         </div>
 
-        <div class="f_kolom">
+        <div>
           <div class="container centreren">
             <input
               id="knop1"
