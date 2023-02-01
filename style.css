@@ -148,3 +148,15 @@ h5 {
   bottom: 0;
   position: relative; /* make the container a positioned ancestor */
 }
+
+.label_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
