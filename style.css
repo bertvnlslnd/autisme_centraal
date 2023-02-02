@@ -34,6 +34,7 @@
   grid-area: d;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .e {
   grid-area: e;
@@ -87,6 +88,7 @@ h1 {
 /*JVLS kolommen*/
 .container {
   display: flex;
+  align-items: stretch;
 }
 .kolom {
   margin: 5px;
@@ -160,4 +162,5 @@ h5 {
 
 .rij_knoppen {
   display: flex;
+  align-items: flex-start;
 }
