@@ -157,3 +157,7 @@ h5 {
   font-size: small;
   font-family: fantasy;
 }
+
+.rij_knoppen {
+  display: flex;
+}
