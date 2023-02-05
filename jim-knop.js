@@ -1,4 +1,5 @@
-// http://eskimoblood.github.com/jim-knopf/
+
+https://github.com/eskimoblood/jim-knopf
 Ui.Knop = function (cssClasse) {
   this.cssClasse = cssClasse;
 };
