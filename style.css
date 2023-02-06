@@ -8,7 +8,7 @@
     "d d e f f"
     "d d e f f";
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: repeat(6,16%);
+  grid-template-rows: repeat(6, 16%);
   width: 90vw;
   height: 90vh;
   gap: 2% 2%;
@@ -54,7 +54,7 @@ html,
 body {
   /* margin: 1%; */
   /* height: 90%; */
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
 }
 
 h1 {
@@ -119,7 +119,7 @@ h1 {
   color: #000007;
   font-family: fantasy;
 }
-.collSpannAll{
+.collSpannAll {
   grid-column: 1 / -1; /* spans all columns */
 }
 
