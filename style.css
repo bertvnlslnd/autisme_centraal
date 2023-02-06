@@ -2,11 +2,13 @@
   display: grid;
   grid-template-areas:
     "b b a c c"
+    "b b a c c"
     "b b e c c"
+    "d d e f f"
     "d d e f f"
     "d d e f f";
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: repeat(4, 25%);
+  grid-template-rows: repeat(6,16%);
   width: 90vw;
   height: 90vh;
   gap: 2% 2%;
@@ -50,8 +52,8 @@
 
 html,
 body {
-  margin: 1%;
-  height: 90%;
+  /* margin: 1%; */
+  /* height: 90%; */
   background-color: rgb(255, 255, 255);
 }
 

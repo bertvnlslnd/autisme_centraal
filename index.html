@@ -311,18 +311,9 @@
           </script>
         </div>
         <div id="c_labels" , class="test">
-          <script type="text/template" id="c_labels-template">
-            <div>
-              <label class="switch"
-                ><input type="checkbox"/><span class="slider round"></span>
-              </label>
-            </div>
-            <div>
-              {{tekst}}
-            </div>
-          </script>
+          
           <script>
-            var test = $($("c_labels-template").html());
+            
             const c = [
               "Gesproken",
               "Gebaren",
@@ -332,7 +323,7 @@
               "Andere",
             ];
             for (i = 0; i < c.length; i++) {
-              var $clone = $("#c_labels-template").html();
+              var $clone = $("#knoppen-template").html();
               $clone = $clone.replace("{{tekst}}", c[i]);
               $("#c_labels").append($clone);
             }
@@ -342,7 +333,7 @@
       <div class="f">
         <div class="header centreren"><h1>Functionaliteit</h1></div>
 
-        <div class="container">
+        <div class="container centreren">
           <div class="kolom" id="blokken4"></div>
           <div class="kolom" id="blokken5"></div>
           <div class="kolom" id="blokken6"></div>
