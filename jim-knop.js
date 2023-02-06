@@ -23,13 +23,13 @@ Ui.Knop.prototype.createElement = function (cssClasse) {
       this.merge(this.options, {
         drawScale: false,
         drawDial: true,
-        radius: this.width / 2.6,
+        radius: this.width / 3,
       })
     )
   );
 
   var circle = new Ui.El.Circle(
-    this.width / 3.3,
+    this.width / 5,
     this.width / 2,
     this.height / 2
   );

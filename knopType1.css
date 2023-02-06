@@ -14,14 +14,15 @@
 }
 
 .knopType1 text {
-  font-size: 8px;
+  font-size: 10px;
   fill: #000000;
   font-family: "Gill Sans";
-  font-weight: 30;
+  /* font-weight: 30; */
   -webkit-transition: all 0.1s ease-in-out;
 }
 
 .knopType1 text.active {
   font-size: 15px;
+  font-weight: bold;
   -webkit-transition: all 0.1s ease-in-out;
 }
