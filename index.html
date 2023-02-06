@@ -16,16 +16,15 @@
   </head>
   <body>
     <script type="text/template" id="knoppen-template">
-      
-        <div class="centreren">
-          <label class="switch"
-            ><input type="checkbox" /><span class="slider round"></span>
-          </label>
-        </div>
-        <div >
-          {{tekst}}
-        </div>
-      
+
+      <div class="centreren">
+        <label class="switch"
+          ><input type="checkbox" /><span class="slider round"></span>
+        </label>
+      </div>
+      <div >
+        {{tekst}}
+      </div>
     </script>
     <div id="outer-grid">
       <div class="b">
@@ -81,7 +80,6 @@
           </script>
 
           <div id="test" , class="kolom">
-          
             <script>
               // var test = $($("#test-template").html());
               const d = [
@@ -99,7 +97,6 @@
               }
             </script>
           </div>
-
         </div>
         <div>
           <div class="label_input centreren">
@@ -125,7 +122,6 @@
 
           <div>
             <div id="test2" , class="kolom">
-             
               <script>
                 var test = $($("#knoppen-template").html());
                 const d2 = [
@@ -143,7 +139,6 @@
               </script>
             </div>
           </div>
-          
         </div>
         <div id="rijDraaiknoppen" class="centreren collSpannAll">
           <script type="text/template" id="draaiKnop-template">
@@ -160,27 +155,26 @@
               />
               <label>{{tekst}}</label>
             </div>
-
           </script>
           <script>
             const textenDraaiKnop = [
-            "Prikkels",
-            "Moeilijkheids-graad",
-            "Duidelijkheid",
-            "Context",
-            "Stappen",
-            "Tempo"
-            
-          ];
-          for (i = 0; i < textenDraaiKnop.length; i++) {
-            var $clone = $("#draaiKnop-template").html();
-            $clone = $clone.replace("{{tekst}}", textenDraaiKnop[i]);
-            $("#rijDraaiknoppen").append($clone);
-          }
-          Array.prototype.slice.call(document.getElementsByClassName("presetDraainkoppen")).forEach(function(el) {
-            new Knob(el, new Ui.Dial("knopType2"));
-            
-        });
+              "Prikkels",
+              "Moeilijkheids-graad",
+              "Duidelijkheid",
+              "Context",
+              "Stappen",
+              "Tempo",
+            ];
+            for (i = 0; i < textenDraaiKnop.length; i++) {
+              var $clone = $("#draaiKnop-template").html();
+              $clone = $clone.replace("{{tekst}}", textenDraaiKnop[i]);
+              $("#rijDraaiknoppen").append($clone);
+            }
+            Array.prototype.slice
+              .call(document.getElementsByClassName("presetDraainkoppen"))
+              .forEach(function (el) {
+                new Knob(el, new Ui.Dial("knopType2"));
+              });
           </script>
         </div>
       </div>
@@ -202,11 +196,28 @@
           <script>
             new Knob(document.getElementById("knop"), new Ui.Knop("knopType1"));
           </script>
+
+          <script>
+            const switchEl = document.querySelector("#knop");
+
+            switchEl.addEventListener("change", function () {
+              const state = this.value;
+              const container = document.querySelector("#great");
+              if (state == 1) {
+                document.body.style.backgroundColor = "rgb(100,100,100)";
+                document.querySelector("html").style.background =
+                  "rgb(100,100,100)";
+              } else {
+                document.querySelector("html").style.background = "white";
+                document.body.style.backgroundColor = "white";
+              }
+            });
+          </script>
         </div>
       </div>
       <div id="knoppen" class="e">
         <div class="header centreren"><h1>Eigenheid</h1></div>
-        
+
         <script>
           // var template = $($("#knoppen-template").html());
           const texten = [
@@ -311,9 +322,7 @@
           </script>
         </div>
         <div id="c_labels" , class="test">
-          
           <script>
-            
             const c = [
               "Gesproken",
               "Gebaren",
