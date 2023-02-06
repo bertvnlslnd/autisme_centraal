@@ -117,6 +117,9 @@ h1 {
   color: #000007;
   font-family: fantasy;
 }
+.collSpannAll{
+  grid-column: 1 / -1; /* spans all columns */
+}
 
 #test {
   grid-column-start: 1;

@@ -15,6 +15,16 @@
     <title>Autisme Centraal Methodiek</title>
   </head>
   <body>
+    <script type="text/template" id="knoppen-template">
+      <div class="centreren">
+        <label class="switch"
+          ><input type="checkbox" /><span class="slider round"></span>
+        </label>
+      </div>
+      <div >
+        {{tekst}}
+      </div>
+    </script>
     <div id="outer-grid">
       <div class="b">
         <div class="header centreren"><h1>Basisrust</h1></div>
@@ -69,18 +79,9 @@
           </script>
 
           <div id="test" , class="kolom">
-            <script type="text/template" id="test-template">
-              <div>
-                <label class="switch"
-                  ><input type="checkbox" /><span class="slider round"></span>
-                </label>
-              </div>
-              <div>
-                {{tekst}}
-              </div>
-            </script>
+          
             <script>
-              var test = $($("#test-template").html());
+              // var test = $($("#test-template").html());
               const d = [
                 "Tijd",
                 "Ruimte",
@@ -90,74 +91,13 @@
                 "Gevolgen",
               ];
               for (i = 0; i < d.length; i++) {
-                var $clone = $("#test-template").html();
+                var $clone = $("#knoppen-template").html();
                 $clone = $clone.replace("{{tekst}}", d[i]);
                 $("#test").append($clone);
               }
             </script>
           </div>
-          <div class="rij_knoppen centreren">
-            <div class="label_input centreren">
-              <input
-                id="knop9"
-                class="preset3"
-                type="range"
-                min="0"
-                max="10"
-                data-width="60"
-                data-height="60"
-                data-angleOffset="-120"
-                data-angleRange="240"
-              />
-              <label>Prkkels</label>
-            </div>
-            <script>
-              new Knob(
-                document.getElementById("knop9"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-            <div class="label_input centreren">
-              <input
-                id="knop11"
-                class="preset3"
-                type="range"
-                min="0"
-                max="10"
-                data-width="60"
-                data-height="60"
-                data-angleOffset="-120"
-                data-angleRange="240"
-              />
-              <label>Moeilijkheids-<br />graad</label>
-            </div>
-            <script>
-              new Knob(
-                document.getElementById("knop11"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-            <div class="label_input centreren">
-              <input
-                id="knop12"
-                class="preset3"
-                type="range"
-                min="0"
-                max="10"
-                data-width="60"
-                data-height="60"
-                data-angleOffset="-120"
-                data-angleRange="240"
-              />
-              <label>Duidelijkheid</label>
-            </div>
-            <script>
-              new Knob(
-                document.getElementById("knop12"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-          </div>
+
         </div>
         <div>
           <div class="label_input centreren">
@@ -183,18 +123,9 @@
 
           <div>
             <div id="test2" , class="kolom">
-              <script type="text/template" id="test2-template">
-                <div>
-                  <label class="switch"
-                    ><input type="checkbox"/><span class="slider round"></span>
-                  </label>
-                </div>
-                <div>
-                  {{tekst}}
-                </div>
-              </script>
+             
               <script>
-                var test = $($("#test2-template").html());
+                var test = $($("#knoppen-template").html());
                 const d2 = [
                   "Communicatie",
                   "Sociaal",
@@ -203,18 +134,20 @@
                   "Leer/Werk",
                 ];
                 for (i = 0; i < d2.length; i++) {
-                  var $clone = $("#test2-template").html();
+                  var $clone = $("#knoppen-template").html();
                   $clone = $clone.replace("{{tekst}}", d2[i]);
                   $("#test2").append($clone);
                 }
               </script>
             </div>
           </div>
-          <div class="rij_knoppen centreren">
+          
+        </div>
+        <div id="rijDraaiknoppen" class="centreren collSpannAll">
+          <script type="text/template" id="draaiKnop-template">
             <div class="label_input centreren">
               <input
-                id="knop16"
-                class="preset3"
+                class="presetDraainkoppen"
                 type="range"
                 min="0"
                 max="10"
@@ -223,55 +156,30 @@
                 data-angleOffset="-120"
                 data-angleRange="240"
               />
-              <label>Context</label>
+              <label>{{tekst}}</label>
             </div>
-            <script>
-              new Knob(
-                document.getElementById("knop16"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-            <div class="label_input centreren">
-              <input
-                id="knop14"
-                class="preset3"
-                type="range"
-                min="0"
-                max="10"
-                data-width="60"
-                data-height="60"
-                data-angleOffset="-120"
-                data-angleRange="240"
-              />
-              <label>Stappen</label>
-            </div>
-            <script>
-              new Knob(
-                document.getElementById("knop14"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-            <div class="label_input centreren">
-              <input
-                id="knop15"
-                class="preset3"
-                type="range"
-                min="0"
-                max="10"
-                data-width="60"
-                data-height="60"
-                data-angleOffset="-120"
-                data-angleRange="240"
-              />
-              <label>Tempo</label>
-            </div>
-            <script>
-              new Knob(
-                document.getElementById("knop15"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-          </div>
+
+          </script>
+          <script>
+            const textenDraaiKnop = [
+            "Prikkels",
+            "Moeilijkheids-graad",
+            "Duidelijkheid",
+            "Context",
+            "Stappen",
+            "Tempo"
+            
+          ];
+          for (i = 0; i < textenDraaiKnop.length; i++) {
+            var $clone = $("#draaiKnop-template").html();
+            $clone = $clone.replace("{{tekst}}", textenDraaiKnop[i]);
+            $("#rijDraaiknoppen").append($clone);
+          }
+          Array.prototype.slice.call(document.getElementsByClassName("presetDraainkoppen")).forEach(function(el) {
+            new Knob(el, new Ui.Dial("knopType2"));
+            
+        });
+          </script>
         </div>
       </div>
       <div class="a">
@@ -296,18 +204,9 @@
       </div>
       <div id="knoppen" class="e">
         <div class="header centreren"><h1>Eigenheid</h1></div>
-        <script type="text/template" id="knoppen-template">
-          <div>
-            <label class="switch"
-              ><input type="checkbox" /><span class="slider round"></span>
-            </label>
-          </div>
-          <div>
-            {{tekst}}
-          </div>
-        </script>
+        
         <script>
-          var template = $($("#knoppen-template").html());
+          // var template = $($("#knoppen-template").html());
           const texten = [
             "Leeftijd",
             "Intelligentie",
