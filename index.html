@@ -28,13 +28,13 @@
     </script>
     <div id="outer-grid">
       <div class="b">
-        <div class="header centreren"><h1>Basisrust</h1></div>
+        <div class="header centreren"><h1>Balans</h1></div>
 
         <!--afmetingen van het canvas zitten in XyFeature.js-->
 
-        <div class="container centreren">
-          <div class="LABEL verticaalCentreren">
-            <div><label id="ap">Uitdagingen</label></div>
+        <div id="graph_grid">
+          <div class="lx LABEL verticaalCentreren">
+            <label id="ap">Uitdagingen</label>
             <input
               id="yRange"
               type="range"
@@ -45,13 +45,12 @@
               class="rotated v-centered-element"
             />
           </div>
-          <div class="kolom">
-            <div><canvas id="grafiek1" class="grafiek"></canvas></div>
+
+          <div><canvas id="grafiek1" class="gr grafiek"></canvas></div>
+          <div class="ly LABELX centreren">
+            <input id="xRange" type="range" min="0" max="100" value="20" />
+            <label>Vaardigheden</label>
           </div>
-        </div>
-        <div class="LABELX centreren">
-          <input id="xRange" type="range" min="0" max="100" value="20" />
-          <label>Vaardigheden</label>
         </div>
 
         <script src="XyFeature.js"></script>
@@ -82,7 +81,7 @@
             );
           </script>
 
-          <div id="test" , class="kolom">
+          <div id="test">
             <script>
               // var test = $($("#test-template").html());
               const d = [
@@ -162,7 +161,7 @@
           <script>
             const textenDraaiKnop = [
               "Prikkels",
-              "Moeilijkheids-graad",
+              "Moeilijkheidsgraad",
               "Duidelijkheid",
               "Context",
               "Stappen",
@@ -211,8 +210,9 @@
                 document.querySelector("html").style.background =
                   "rgb(100,100,100)";
               } else {
-                document.querySelector("html").style.background = "white";
-                document.body.style.backgroundColor = "white";
+                document.querySelector("html").style.background =
+                  "rgb(230,230,230)";
+                document.body.style.backgroundColor = "rgb(230,230,230)";
               }
             });
           </script>

@@ -19,6 +19,26 @@
   padding: 20px;
   border-radius: 20px;
 }
+
+#graph_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-areas:
+    "lx gr"
+    ".  ly";
+}
+
+.lx {
+  grid-area: lx;
+}
+.ly {
+  grid-area: ly;
+}
+
+.gr {
+  grid-area: gr;
+}
+
 .a {
   grid-area: a;
 }
@@ -90,10 +110,9 @@ h1 {
 /*JVLS kolommen*/
 .container {
   display: flex;
-  align-items: stretch;
 }
 .kolom {
-  margin: 5px;
+  margin: 20px;
 }
 /*groene blokken*/
 .led {
