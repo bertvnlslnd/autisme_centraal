@@ -67,11 +67,11 @@ h1 {
   border-radius: 5px;
 }
 .rotated {
-  writing-mode: bt-lr;
   -webkit-appearance: slider-vertical;
   width: 10px;
   height: 200px;
   margin-right: 5px;
+  background-color: beige;
 }
 .centreren {
   display: flex;
@@ -169,4 +169,20 @@ h5 {
 .rij_knoppen {
   display: flex;
   align-items: flex-start;
+}
+
+#ap {
+  margin-right: 10px;
+}
+
+.LABEL {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.LABELX {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
