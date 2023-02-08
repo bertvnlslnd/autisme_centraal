@@ -367,7 +367,7 @@ Ui.Scale.prototype.dial = function () {
       //********************************************************
       //********** FIX HERE***************************************
       else {
-        text.translate(0, this.height / 1.2);
+        text.translate(0, this.height / 1.3);
       }
       text.attr("text-anchor", "middle");
       this.dials.push(text);

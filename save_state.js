@@ -2,7 +2,8 @@ function download() {
   // Get the button states
 
   var rangeStates = [
-    { id: "range1", value: document.getElementById("knop1").value },
+    { id: "knop1", value: document.getElementById("knop1").value },
+    { id: "knop2", value: document.getElementById("knop2").value },
   ];
 
   var buttonStates = [
