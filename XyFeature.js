@@ -44,8 +44,9 @@ function tekenBal(ctx) {
 
   ctx.fillStyle = "black";
   ctx.save();
-  ctx.translate(afmeting / 2, afmeting / 2);
-  ctx.rotate(Math.pi / 5);
+  ctx.translate((8 * afmeting) / 20, (13 * afmeting) / 20);
+  ctx.rotate(-Math.PI / 4);
+  ctx.font = "20px Arial";
   ctx.fillText("FLOW", 0, 0);
   ctx.restore();
 }
