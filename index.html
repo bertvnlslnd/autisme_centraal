@@ -10,6 +10,8 @@
     <script src="groenBlokken.js"></script>
     <script src="knob.js"></script>
     <script src="jim-knop.js"></script>
+    <script src="save_state.js"></script>
+    <script src="load_state.js"></script>
     <link rel="stylesheet" href="knopType1.css" />
     <link rel="stylesheet" href="knopType2.css" />
     <title>Autisme Centraal Methodiek</title>
@@ -217,6 +219,36 @@
             });
           </script>
         </div>
+        <div>
+          <button type="button" id="downloadButton">Opslaan</button>
+          <button onclick="openFileDialog()">Laden</button>
+          <input type="file" id="fileInput" style="display: none" />
+
+          <script>
+            function openFileDialog() {
+              document.getElementById("fileInput").click();
+            }
+
+            const fileInput = document.getElementById("fileInput");
+
+            fileInput.addEventListener("change", function (event) {
+              const file = event.target.files[0];
+              const reader = new FileReader();
+
+              reader.addEventListener("load", function (event) {
+                const contents = event.target.result;
+                load_state(contents);
+              });
+
+              reader.readAsText(file);
+            });
+          </script>
+        </div>
+        <script>
+          document
+            .getElementById("downloadButton")
+            .addEventListener("click", download);
+        </script>
       </div>
       <div id="knoppen" class="e">
         <div class="header centreren"><h1>Eigenheid</h1></div>
