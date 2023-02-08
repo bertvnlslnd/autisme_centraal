@@ -49,4 +49,13 @@ function tekenBal(ctx) {
   ctx.font = "20px Arial";
   ctx.fillText("FLOW", 0, 0);
   ctx.restore();
+
+  ctx.translate(afmeting / 6, afmeting / 4);
+  ctx.font = "15px Arial";
+  ctx.fillText("Stress", 0, 0);
+
+  ctx.translate((2.8 * afmeting) / 6, (3 * afmeting) / 6);
+  ctx.font = "15px Arial";
+
+  ctx.fillText("Verveling", 0, 0);
 }
