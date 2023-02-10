@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="on_of_switch.css" />
-    <link rel="stylesheet" href="roundslider.min.css" />
-    <script src="jquery.min.js"></script>
-    <script src="roundslider.min.js"></script>
-    <script src="groenBlokken.js"></script>
-    <script src="knob.js"></script>
-    <script src="jim-knop.js"></script>
-    <link rel="stylesheet" href="knopType1.css" />
-    <link rel="stylesheet" href="knopType2.css" />
-    <title>Autisme Centraal Methodiek</title>
-  </head>
-  <body>
-    <script type="text/template" id="knoppen-template">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="on_of_switch.css" />
+  <link rel="stylesheet" href="roundslider.min.css" />
+  <script src="jquery.min.js"></script>
+  <script src="roundslider.min.js"></script>
+  <script src="groenBlokken.js"></script>
+  <script src="knob.js"></script>
+  <script src="jim-knop.js"></script>
+  <link rel="stylesheet" href="knopType1.css" />
+  <link rel="stylesheet" href="knopType2.css" />
+  <title>Autisme Centraal Methodiek</title>
+</head>
+
+<body>
+  <script type="text/template" id="knoppen-template">
 
       <div class="centreren">
         <label class="switch"
@@ -26,124 +28,103 @@
         {{tekst}}
       </div>
     </script>
-    <div id="outer-grid">
-      <div class="b">
-        <div class="header centreren"><h1>Balans</h1></div>
-
-        <!--afmetingen van het canvas zitten in XyFeature.js-->
-
-        <div id="graph_grid">
-          <div class="lx LABEL verticaalCentreren">
-            <label id="ap">Uitdagingen</label>
-            <input
-              id="yRange"
-              type="range"
-              min="0"
-              max="100"
-              value="20"
-              orient="vertical"
-              class="rotated v-centered-element"
-            />
-          </div>
-
-          <div><canvas id="grafiek1" class="gr grafiek"></canvas></div>
-          <div class="ly LABELX centreren">
-            <input id="xRange" type="range" min="0" max="100" value="20" />
-            <label>Vaardigheden</label>
-          </div>
-        </div>
-
-        <script src="XyFeature.js"></script>
+  <div id="outer-grid">
+    <div class="b">
+      <div class="header centreren">
+        <h1>Balans</h1>
       </div>
 
-      <div class="d">
-        <div class="header centreren"><h1>Dubbel Spoor</h1></div>
-        <!--template knop-->
-        <div>
-          <div class="label_input centreren">
-            <input
-              id="knop7"
-              class="preset3"
-              type="range"
-              min="0"
-              max="10"
-              data-width="60"
-              data-height="60"
-              data-angleOffset="-120"
-              data-angleRange="240"
-            />
-            <label>Omgeving</label>
-          </div>
-          <script>
-            new Knob(
-              document.getElementById("knop7"),
-              new Ui.Dial("knopType2")
-            );
-          </script>
+      <!--afmetingen van het canvas zitten in XyFeature.js-->
 
-          <div id="test">
+      <div id="graph_grid">
+        <div class="lx LABEL verticaalCentreren">
+          <label id="ap">Uitdagingen</label>
+          <input id="yRange" type="range" min="0" max="100" value="20" orient="vertical"
+            class="rotated v-centered-element" />
+        </div>
+
+        <div><canvas id="grafiek1" class="gr grafiek"></canvas></div>
+        <div class="ly LABELX centreren">
+          <input id="xRange" type="range" min="0" max="100" value="20" />
+          <label>Vaardigheden</label>
+        </div>
+      </div>
+
+      <script src="XyFeature.js"></script>
+    </div>
+
+    <div class="d">
+      <div class="header centreren">
+        <h1>Dubbel Spoor</h1>
+      </div>
+      <!--template knop-->
+      <div>
+        <div class="label_input centreren">
+          <input id="knop7" class="preset3" type="range" min="0" max="10" data-width="60" data-height="60"
+            data-angleOffset="-120" data-angleRange="240" />
+          <label>Omgeving</label>
+        </div>
+        <script>
+          new Knob(
+            document.getElementById("knop7"),
+            new Ui.Dial("knopType2")
+          );
+        </script>
+
+        <div id="test">
+          <script>
+            // var test = $($("#test-template").html());
+            const d = [
+              "Tijd",
+              "Ruimte",
+              "Activiteit",
+              "Gedrag",
+              "Verwachtingen",
+              "Gevolgen",
+            ];
+            for (i = 0; i < d.length; i++) {
+              var $clone = $("#knoppen-template").html();
+              $clone = $clone.replace("{{tekst}}", d[i]);
+              $("#test").append($clone);
+            }
+          </script>
+        </div>
+      </div>
+      <div>
+        <div class="label_input centreren">
+          <input id="knop8" class="preset3" type="range" min="0" max="10" data-width="60" data-height="60"
+            data-angleOffset="-120" data-angleRange="240" />
+          <label>Persoon</label>
+        </div>
+        <script>
+          new Knob(
+            document.getElementById("knop8"),
+            new Ui.Dial("knopType2")
+          );
+        </script>
+
+        <div>
+          <div id="test2" , class="kolom">
             <script>
-              // var test = $($("#test-template").html());
-              const d = [
-                "Tijd",
-                "Ruimte",
-                "Activiteit",
-                "Gedrag",
-                "Verwachtingen",
-                "Gevolgen",
+              var test = $($("#knoppen-template").html());
+              const d2 = [
+                "Communicatie",
+                "Sociaal",
+                "Vrije tijd",
+                "Zelfredzaamheid",
+                "Leer/Werk",
               ];
-              for (i = 0; i < d.length; i++) {
+              for (i = 0; i < d2.length; i++) {
                 var $clone = $("#knoppen-template").html();
-                $clone = $clone.replace("{{tekst}}", d[i]);
-                $("#test").append($clone);
+                $clone = $clone.replace("{{tekst}}", d2[i]);
+                $("#test2").append($clone);
               }
             </script>
           </div>
         </div>
-        <div>
-          <div class="label_input centreren">
-            <input
-              id="knop8"
-              class="preset3"
-              type="range"
-              min="0"
-              max="10"
-              data-width="60"
-              data-height="60"
-              data-angleOffset="-120"
-              data-angleRange="240"
-            />
-            <label>Persoon</label>
-          </div>
-          <script>
-            new Knob(
-              document.getElementById("knop8"),
-              new Ui.Dial("knopType2")
-            );
-          </script>
-
-          <div>
-            <div id="test2" , class="kolom">
-              <script>
-                var test = $($("#knoppen-template").html());
-                const d2 = [
-                  "Communicatie",
-                  "Sociaal",
-                  "Vrije tijd",
-                  "Zelfredzaamheid",
-                  "Leer/Werk",
-                ];
-                for (i = 0; i < d2.length; i++) {
-                  var $clone = $("#knoppen-template").html();
-                  $clone = $clone.replace("{{tekst}}", d2[i]);
-                  $("#test2").append($clone);
-                }
-              </script>
-            </div>
-          </div>
-        </div>
-        <div id="rijDraaiknoppen" class="centreren collSpannAll">
-          <script type="text/template" id="draaiKnop-template">
+      </div>
+      <div id="rijDraaiknoppen" class="centreren collSpannAll">
+        <script type="text/template" id="draaiKnop-template">
             <div class="label_input centreren">
               <input
                 class="presetDraainkoppen"
@@ -158,308 +139,259 @@
               <label>{{tekst}}</label>
             </div>
           </script>
-          <script>
-            const textenDraaiKnop = [
-              "Prikkels",
-              "Moeilijkheidsgraad",
-              "Duidelijkheid",
-              "Context",
-              "Stappen",
-              "Tempo",
-            ];
-            for (i = 0; i < textenDraaiKnop.length; i++) {
-              var $clone = $("#draaiKnop-template").html();
-              $clone = $clone.replace("{{tekst}}", textenDraaiKnop[i]);
-              $("#rijDraaiknoppen").append($clone);
-            }
-            Array.prototype.slice
-              .call(document.getElementsByClassName("presetDraainkoppen"))
-              .forEach(function (el) {
-                new Knob(el, new Ui.Dial("knopType2"));
-              });
-          </script>
-        </div>
-      </div>
-      <div class="a">
-        <div class="header centreren"><h1>Aangepast Denken</h1></div>
-        <div>
-          <div class="container centreren">
-            <input
-              id="knop"
-              class="preset1"
-              type="range"
-              data-width="120"
-              data-height="120"
-              data-angleOffset="-45"
-              data-labels="ON,OFF"
-              data-angleRange="90"
-            />
-          </div>
-          <script>
-            new Knob(document.getElementById("knop"), new Ui.Knop("knopType1"));
-          </script>
-
-          <script>
-            const switchEl = document.querySelector("#knop");
-
-            switchEl.addEventListener("change", function () {
-              const state = this.value;
-              const container = document.querySelector("#great");
-              if (state == 1) {
-                document.body.style.backgroundColor = "rgb(100,100,100)";
-                document.querySelector("html").style.background =
-                  "rgb(100,100,100)";
-              } else {
-                document.querySelector("html").style.background =
-                  "rgb(230,230,230)";
-                document.body.style.backgroundColor = "rgb(230,230,230)";
-              }
-            });
-          </script>
-        </div>
-      </div>
-      <div id="knoppen" class="e">
-        <div class="header centreren"><h1>Eigenheid</h1></div>
-
         <script>
-          // var template = $($("#knoppen-template").html());
-          const texten = [
-            "Leeftijd",
-            "Intelligentie",
-            "Sociale ontwikkeling",
-            "Emotionele ontwikkeling",
-            "Gender",
-            "Begripsniveau",
-            "Interesses",
-            "Talenten",
-            "Comorbiditeit",
-            "Sensorisch profiel",
-            "Persoonlijkheid",
-            "Voorgeschiedenis",
-            "Waarden en normen",
+          const textenDraaiKnop = [
+            "Prikkels",
+            "Moeilijkheidsgraad",
+            "Duidelijkheid",
+            "Context",
+            "Stappen",
+            "Tempo",
           ];
-          for (i = 0; i < texten.length; i++) {
-            var $clone = $("#knoppen-template").html();
-            $clone = $clone.replace("{{tekst}}", texten[i]);
-            $("#knoppen").append($clone);
+          for (i = 0; i < textenDraaiKnop.length; i++) {
+            var $clone = $("#draaiKnop-template").html();
+            $clone = $clone.replace("{{tekst}}", textenDraaiKnop[i]);
+            $("#rijDraaiknoppen").append($clone);
           }
+          Array.prototype.slice
+            .call(document.getElementsByClassName("presetDraainkoppen"))
+            .forEach(function (el) {
+              new Knob(el, new Ui.Dial("knopType2"));
+            });
         </script>
       </div>
-
-      <div class="c">
-        <div class="header centreren"><h1>Concrete communicatie</h1></div>
-        <div>
-          <div class="label_input centreren">
-            <label>Voldoende</label>
-            <input
-              id="knop4"
-              class="preset3"
-              type="range"
-              min="0"
-              max="10"
-              data-width="60"
-              data-height="60"
-              data-angleOffset="-120"
-              data-angleRange="240"
-            />
-
-            <script>
-              new Knob(
-                document.getElementById("knop4"),
-                new Ui.Dial("knopType2")
-              );
-            </script>
-          </div>
-          <div class="container centreren">
-            <input
-              id="knop5"
-              class="preset2"
-              type="range"
-              data-width="80"
-              data-height="80"
-              data-angleOffset="-45"
-              data-labels="Neg,Pos"
-              data-angleRange="90"
-            />
-
-            <script>
-              new Knob(
-                document.getElementById("knop5"),
-                new Ui.Knop("knopType1")
-              );
-            </script>
-          </div>
-          <div class="container centreren">
-            <input
-              id="knop6"
-              class="preset2"
-              type="range"
-              data-width="130"
-              data-height="130"
-              data-angleOffset="0"
-              data-labels="sensatie,presentatie,representatie,meta representatie"
-              data-angleRange="270"
-            />
-
-            <script>
-              new Knob(
-                document.getElementById("knop6"),
-                new Ui.Knop("knopType1")
-              );
-            </script>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="kolom" id="blokken1"></div>
-          <div class="kolom" id="blokken2"></div>
-          <div class="kolom" id="blokken3"></div>
-          <script>
-            groeneBlokken($("#blokken1"), "Expliciet");
-          </script>
-          <script>
-            groeneBlokken($("#blokken2"), "Begrijpelijk");
-          </script>
-          <script>
-            groeneBlokken($("#blokken3"), "Beschikbaar");
-          </script>
-        </div>
-        <div id="c_labels" , class="test">
-          <script>
-            const c = [
-              "Gesproken",
-              "Gebaren",
-              "Geschreven",
-              "Afbeeldingen",
-              "Voorwerpen",
-              "Andere",
-            ];
-            for (i = 0; i < c.length; i++) {
-              var $clone = $("#knoppen-template").html();
-              $clone = $clone.replace("{{tekst}}", c[i]);
-              $("#c_labels").append($clone);
-            }
-          </script>
-        </div>
+    </div>
+    <div class="a">
+      <div class="header centreren">
+        <h1>Aangepast Denken</h1>
       </div>
-      <div class="f">
-        <div class="header centreren"><h1>Functionaliteit</h1></div>
-
+      <div>
         <div class="container centreren">
-          <div class="kolom" id="blokken4"></div>
-          <div class="kolom" id="blokken5"></div>
-          <div class="kolom" id="blokken6"></div>
-          <script>
-            groeneBlokken($("#blokken4"), "Autonomie");
-          </script>
-          <script>
-            groeneBlokken($("#blokken5"), "Betrokkenheid");
-          </script>
-          <script>
-            groeneBlokken($("#blokken6"), "Competentie");
-          </script>
-          <div class="kolom"></div>
+          <input id="knop" class="preset1" type="range" data-width="120" data-height="120" data-angleOffset="-45"
+            data-labels="ON,OFF" data-angleRange="90" />
         </div>
+        <script>
+          new Knob(document.getElementById("knop"), new Ui.Knop("knopType1"));
+        </script>
 
-        <div>
-          <div class="container centreren">
-            <input
-              id="knop1"
-              class="preset2"
-              type="range"
-              min="0"
-              max="1"
-              data-width="120"
-              data-height="120"
-              data-angleOffset="-45"
-              data-labels="Persoon,Omgeving"
-              data-angleRange="90"
-            />
-          </div>
-          <script>
-            new Knob(
-              document.getElementById("knop1"),
-              new Ui.Knop("knopType1")
-            );
-          </script>
-          <div class="container centreren">
-            <input
-              id="knop2"
-              class="preset2"
-              type="range"
-              min="0"
-              max="1"
-              data-width="90"
-              data-height="90"
-              data-angleOffset="-45"
-              data-labels="Nu,Later"
-              data-angleRange="90"
-            />
-          </div>
-          <script>
-            new Knob(
-              document.getElementById("knop2"),
-              new Ui.Knop("knopType2")
-            );
-          </script>
+        <script>
+          const switchEl = document.querySelector("#knop");
 
-          <div class="label_input centreren">
-            <input
-              id="knop3"
-              class="preset3"
-              type="range"
-              min="0"
-              max="10"
-              data-width="60"
-              data-height="60"
-              data-angleOffset="-120"
-              data-angleRange="240"
-            />
-            <label>Generaliseerbaar</label>
-          </div>
+          switchEl.addEventListener("change", function () {
+            const state = this.value;
+            const container = document.querySelector("#great");
+            if (state == 1) {
+              document.body.style.backgroundColor = "rgb(100,100,100)";
+              document.querySelector("html").style.background =
+                "rgb(100,100,100)";
+              
+              // knoppen afleggen
+              $("input").attr('disabled', true);
+              $(".slider").addClass("sliderDisabled");
+              //$(".sliderDisabled").removeClass("slider");
+            } else {
+              document.querySelector("html").style.background =
+                "rgb(230,230,230)";
+              document.body.style.backgroundColor = "rgb(230,230,230)";
+              // knoppen aanleggen
+              $("input").attr('disabled', false);
+              //$(".sliderDisabled").addClass("slider");
+              $(".slider").removeClass("sliderDisabled");
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <div id="knoppen" class="e">
+      <div class="header centreren">
+        <h1>Eigenheid</h1>
+      </div>
+
+      <script>
+        // var template = $($("#knoppen-template").html());
+        const texten = [
+          "Leeftijd",
+          "Intelligentie",
+          "Sociale ontwikkeling",
+          "Emotionele ontwikkeling",
+          "Gender",
+          "Begripsniveau",
+          "Interesses",
+          "Talenten",
+          "Comorbiditeit",
+          "Sensorisch profiel",
+          "Persoonlijkheid",
+          "Voorgeschiedenis",
+          "Waarden en normen",
+        ];
+        for (i = 0; i < texten.length; i++) {
+          var $clone = $("#knoppen-template").html();
+          $clone = $clone.replace("{{tekst}}", texten[i]);
+          $("#knoppen").append($clone);
+        }
+      </script>
+    </div>
+
+    <div class="c">
+      <div class="header centreren">
+        <h1>Concrete communicatie</h1>
+      </div>
+      <div>
+        <div class="label_input centreren">
+          <label>Voldoende</label>
+          <input id="knop4" class="preset3" type="range" min="0" max="10" data-width="60" data-height="60"
+            data-angleOffset="-120" data-angleRange="240" />
+
           <script>
             new Knob(
-              document.getElementById("knop3"),
+              document.getElementById("knop4"),
               new Ui.Dial("knopType2")
             );
           </script>
         </div>
+        <div class="container centreren">
+          <input id="knop5" class="preset2" type="range" data-width="80" data-height="80" data-angleOffset="-45"
+            data-labels="Neg,Pos" data-angleRange="90" />
+
+          <script>
+            new Knob(
+              document.getElementById("knop5"),
+              new Ui.Knop("knopType1")
+            );
+          </script>
+        </div>
+        <div class="container centreren">
+          <input id="knop6" class="preset2" type="range" data-width="130" data-height="130" data-angleOffset="0"
+            data-labels="sensatie,presentatie,representatie,meta representatie" data-angleRange="270" />
+
+          <script>
+            new Knob(
+              document.getElementById("knop6"),
+              new Ui.Knop("knopType1")
+            );
+          </script>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="kolom" id="blokken1"></div>
+        <div class="kolom" id="blokken2"></div>
+        <div class="kolom" id="blokken3"></div>
+        <script>
+          groeneBlokken($("#blokken1"), "Expliciet");
+        </script>
+        <script>
+          groeneBlokken($("#blokken2"), "Begrijpelijk");
+        </script>
+        <script>
+          groeneBlokken($("#blokken3"), "Beschikbaar");
+        </script>
+      </div>
+      <div id="c_labels" , class="test">
+        <script>
+          const c = [
+            "Gesproken",
+            "Gebaren",
+            "Geschreven",
+            "Afbeeldingen",
+            "Voorwerpen",
+            "Andere",
+          ];
+          for (i = 0; i < c.length; i++) {
+            var $clone = $("#knoppen-template").html();
+            $clone = $clone.replace("{{tekst}}", c[i]);
+            $("#c_labels").append($clone);
+          }
+        </script>
       </div>
     </div>
-    <svg>
-      <filter id="dropshadow" height="150%" width="150%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-        <feOffset dx="0" dy="3" result="offsetblur" />
-        <feMerge>
-          <feMergeNode />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-      <filter id="inner-shadow">
-        <!-- Shadow Offset -->
-        <feOffset dx="0" dy="5" />
+    <div class="f">
+      <div class="header centreren">
+        <h1>Functionaliteit</h1>
+      </div>
 
-        <!-- Shadow Blur -->
-        <feGaussianBlur stdDeviation="5" result="offset-blur" />
+      <div class="container centreren">
+        <div class="kolom" id="blokken4"></div>
+        <div class="kolom" id="blokken5"></div>
+        <div class="kolom" id="blokken6"></div>
+        <script>
+          groeneBlokken($("#blokken4"), "Autonomie");
+        </script>
+        <script>
+          groeneBlokken($("#blokken5"), "Betrokkenheid");
+        </script>
+        <script>
+          groeneBlokken($("#blokken6"), "Competentie");
+        </script>
+        <div class="kolom"></div>
+      </div>
 
-        <!-- Invert the drop shadow
+      <div>
+        <div class="container centreren">
+          <input id="knop1" class="preset2" type="range" min="0" max="1" data-width="120" data-height="120"
+            data-angleOffset="-45" data-labels="Persoon,Omgeving" data-angleRange="90" />
+        </div>
+        <script>
+          new Knob(
+            document.getElementById("knop1"),
+            new Ui.Knop("knopType1")
+          );
+        </script>
+        <div class="container centreren">
+          <input id="knop2" class="preset2" type="range" min="0" max="1" data-width="90" data-height="90"
+            data-angleOffset="-45" data-labels="Nu,Later" data-angleRange="90" />
+        </div>
+        <script>
+          new Knob(
+            document.getElementById("knop2"),
+            new Ui.Knop("knopType2")
+          );
+        </script>
+
+        <div class="label_input centreren">
+          <input id="knop3" class="preset3" type="range" min="0" max="10" data-width="60" data-height="60"
+            data-angleOffset="-120" data-angleRange="240" />
+          <label>Generaliseerbaar</label>
+        </div>
+        <script>
+          new Knob(
+            document.getElementById("knop3"),
+            new Ui.Dial("knopType2")
+          );
+        </script>
+      </div>
+    </div>
+  </div>
+  <svg>
+    <filter id="dropshadow" height="150%" width="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="0" dy="3" result="offsetblur" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="inner-shadow">
+      <!-- Shadow Offset -->
+      <feOffset dx="0" dy="5" />
+
+      <!-- Shadow Blur -->
+      <feGaussianBlur stdDeviation="5" result="offset-blur" />
+
+      <!-- Invert the drop shadow
                to create an inner shadow -->
-        <feComposite
-          operator="out"
-          in="SourceGraphic"
-          in2="offset-blur"
-          result="inverse"
-        />
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
 
-        <!-- Color & Opacity -->
-        <feFlood flood-color="black" flood-opacity="0.75" result="color" />
+      <!-- Color & Opacity -->
+      <feFlood flood-color="black" flood-opacity="0.75" result="color" />
 
-        <!-- Clip color inside shadow -->
-        <feComposite operator="in" in="color" in2="inverse" result="shadow" />
+      <!-- Clip color inside shadow -->
+      <feComposite operator="in" in="color" in2="inverse" result="shadow" />
 
-        <!-- Put shadow over original object -->
-        <feComposite operator="over" in="shadow" in2="SourceGraphic" />
-      </filter>
-    </svg>
-  </body>
+      <!-- Put shadow over original object -->
+      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+    </filter>
+  </svg>
+</body>
+
 </html>
